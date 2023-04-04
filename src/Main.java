@@ -4,7 +4,7 @@ import java.util.*;
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        //********************************************************************
+
         // Stack = LIFO data structure . LIFO -> Last-in First-out
         //      stores objects into a sort of "vertical tower"
         //      push() to add to top
@@ -25,7 +25,6 @@ public class Main {
         //
         //********************************************************************
 
-        //********************************************************************
         // Queue = FIFO data structure. FIFO -> First-in First-out
         //      A collection designed for holding elements prior processing
         //      Linear data structure
@@ -64,8 +63,45 @@ public class Main {
         //      while(!queue.isEmpty()){
         //      System.out.println(queue.poll());
         //      }
+        //********************************************************************
 
+        // LinkedList = stores Nodes in two parts (data + address)
+        //      Nodes are non-consecutive memory locations
+        //      Elements are linked using pointers
+        //                          Singly Linked list:
+        //         Node                   Node                     Node
+        //   [ data | address]   ->   [ data | address]    ->     [ data | address]
+        //
+        //                          Doubly Linked List:
+        //               Node                               Node                                Node
+        //   [ address | data | address]   <->   [ address | data | address]   <->    [ address | data | address]
+        //
+        //      You can work with a linkedlist either as a queue or a stack, by using their own methods
+        //         LinkedList<String> linkedList = new LinkedList<>();
+        //
+        //       linkedList.push("A");
+        //       linkedList.push("B");
+        //       linkedList.push("C");
+        //       linkedList.push("D");
+        //       linkedList.push("F");
+        //       linkedList.pop();
+        //
+        //       System.out.println(linkedList);
 
+        //       linkedList.offer("A");
+        //       linkedList.offer("B");
+        //       linkedList.offer("C");
+        //       linkedList.offer("D");
+        //       linkedList.offer("F");
+
+        //       linkedList.add(4, "E");
+        //       linkedList.remove(4);
+        //       System.out.println(linkedList.indexOf("F"));
+        //       System.out.println(linkedList.peekFirst());
+        //       System.out.println(linkedList.peekLast());
+        //       linkedList.addFirst("0");
+        //       linkedList.addLast("G");
+        //       System.out.println(linkedList);
 
     }
 }
