@@ -1,6 +1,4 @@
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Stack;
+import java.util.*;
 
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
@@ -28,7 +26,7 @@ public class Main {
         //********************************************************************
 
         //********************************************************************
-        // Queure = FIFO data structure. FIFO -> First-in First-out
+        // Queue = FIFO data structure. FIFO -> First-in First-out
         //      A collection designed for holding elements prior processing
         //      Linear data structure
         //      is an interface so we cant create an objetc of it, we can a class that implements it
@@ -51,6 +49,23 @@ public class Main {
         //
         //      System.out.println(queue);
         //********************************************************************
+
+        // Priority Queue = FIFO data structure that servers elements with the highest priorities first before elements
+        //                  with lower priority
+        //      Collections.reverseOrder() is an argument passed in the constructor to reverse the sorting of priority queues
+        //      Queue<Double> queue = new PriorityQueue<Double>(Collections.reverseOrder());
+        //
+        //      queue.offer(3.0);
+        //      queue.offer(2.5);
+        //      queue.offer(4.0);
+        //      queue.offer(1.5);
+        //      queue.offer(2.0);
+
+        //      while(!queue.isEmpty()){
+        //      System.out.println(queue.poll());
+        //      }
+
+
 
     }
 }
