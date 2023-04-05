@@ -2,6 +2,7 @@ import java.util.Arrays;
 
 public class Algorithm {
     public static void main(String[] args){
+        //***************************Searching algorithms***************************
         // linear search iterate through a collection one element at time
 
         // run time complexity: O(n)
@@ -51,15 +52,28 @@ public class Algorithm {
         //                        average case: O(log(log(n)))
         //                        worst case: O(n) [values increase exponentially]
 
-        int[] array = {1,2,4,6,8,10,12,14,16,18,20};
-        int index =  interpolationSearch(array, 8);
-        if(index != -1){
-            System.out.println("Element found at index: " + index);
-        }
-        else{
-            System.out.println("Element not found");
-        }
+        //int[] array = {1,2,4,6,8,10,12,14,16,18,20};
+        //int index =  interpolationSearch(array, 8);
+        //if(index != -1){
+        //    System.out.println("Element found at index: " + index);
+        //}
+        //else{
+        //    System.out.println("Element not found");
+        //}
 
+        //***************************Sorting algorithms***************************
+        // bubble sort = pair of adjacent elements are compared, and the elements
+        //               swapped if they are not in order
+
+        //               Quadratic time O(n²)
+        //               small data set = okay-ish
+        //               large data set = bad
+
+        int[] array = {9,1,8,2,7,3,6,4,5};
+        bubbleSort(array);
+        for(int i : array){
+            System.out.print(i);
+        }
     }
 
 
@@ -71,7 +85,6 @@ public class Algorithm {
         }
         return  -1;
     }
-
     private static int binarySearch(int arr[], int target){
        int low = 0;
        int high = arr.length-1;
@@ -92,7 +105,6 @@ public class Algorithm {
        }
        return 0;
     }
-
     private static int interpolationSearch(int[] array, int value) {
         int high = array.length-1;
         int low = 0;
@@ -113,5 +125,17 @@ public class Algorithm {
             }
         }
         return -1;
+    }
+
+    public static void bubbleSort(int[] array){
+        for (int i =0; i < array.length-1; i++){
+            for (int j = 0; j < array.length - i - 1; j++ ){
+                   if(array[j] > array[j+1]){
+                       int temp = array[j];
+                       array[j] = array[j+1];
+                       array[j+1] = temp;
+                   }
+            }
+        }
     }
 }
