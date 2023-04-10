@@ -1,7 +1,7 @@
 import java.util.Arrays;
 
 public class Algorithm {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         //***************************Searching algorithms***************************
         // linear search iterate through a collection one element at time
 
@@ -19,12 +19,11 @@ public class Algorithm {
 
         //int index = linearSearch(array, 10);
         //if(index != -1){
-            //System.out.println("Element found at index: " + index);
+        //System.out.println("Element found at index: " + index);
         //}
         //else {
-            //System.out.println("Element not found");
+        //System.out.println("Element not found");
         //}
-
 
 
         // binary search = Search algorithm that finds the position of a target value within a sorted array.
@@ -44,7 +43,6 @@ public class Algorithm {
         //}
 
 
-
         // interpolation search = improvement over binary search best used for "uniformly" distributed data "guesses"
         //                        where a value might be based on calculated probes results
         //                        if probe is incorrect, search area is narrowed, and a new probe is calculated
@@ -61,6 +59,7 @@ public class Algorithm {
         //    System.out.println("Element not found");
         //}
 
+
         //***************************Sorting algorithms***************************
         // bubble sort = pair of adjacent elements are compared, and the elements
         //               swapped if they are not in order
@@ -69,11 +68,25 @@ public class Algorithm {
         //               small data set = okay-ish
         //               large data set = bad
 
-        int[] array = {9,1,8,2,7,3,6,4,5};
-        bubbleSort(array);
-        for(int i : array){
-            System.out.print(i);
-        }
+        //int[] array = {9,1,8,2,7,3,6,4,5};
+        //bubbleSort(array);
+        //for(int i : array){
+        //System.out.print(i);
+        //}
+        //}
+
+        // selection sort = search through an array and keep track of the minimum value during each interaction. At the
+        //                  end of each iteration, we swap variables
+
+        //                  Quadratic time O(n²)
+        //                  small data set = okay
+        //                  large data set = BAD
+
+            int[] array = {8, 7, 9, 2, 3, 1, 5, 4, 6};
+            selectionSort(array);
+            for(int i : array){
+                System.out.print(i);
+            }
     }
 
 
@@ -136,6 +149,19 @@ public class Algorithm {
                        array[j+1] = temp;
                    }
             }
+        }
+    }
+    public static void selectionSort(int[] array){
+        for(int i = 0; i < array.length; i++){
+            int min = i;
+            for(int j = i+1; j <array.length; j++){
+                if(array[min] > array[j]){
+                    min = j;
+                }
+            }
+            int temp = array[i];
+            array[i]  = array[min];
+            array[min] = temp;
         }
     }
 }
