@@ -1,3 +1,5 @@
+package datastructure;
+
 import java.io.ObjectStreamException;
 
 public class DynamicArray {
