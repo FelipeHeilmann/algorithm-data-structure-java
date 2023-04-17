@@ -28,6 +28,6 @@ public class GraphMatrixTest {
 
         System.out.println(graph.checkEdge(2,1));
 
-        graph.depthFirstSearch(0);
+        graph.breadthFirstSearch(3);
     }
 }
