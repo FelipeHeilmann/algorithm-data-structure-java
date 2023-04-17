@@ -2,7 +2,13 @@ package datastructure;
 
 public class Node {
     char data;
-    Node(char data){
-        this.data = data;
+    int treeData;
+    Node left;
+    Node right;
+
+
+
+    Node(int data){
+        this.treeData = data;
     }
 }
