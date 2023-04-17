@@ -40,4 +40,28 @@ public class GraphMatrix {
             System.out.println();
         }
     }
+
+    //depth first search = pick a route, keep going.
+    //                      if you reach a dead end, or an already visited node,
+    //                      backtrack to previous node with unvisited adjacent neighbors
+    public void depthFirstSearch(int source){
+        boolean[] vised = new boolean[matrix.length];
+        dfsHelper(source, vised);
+    }
+    private void dfsHelper(int source, boolean[] visited){
+        if(visited[source] == true){
+            return;
+        }
+        else{
+            visited[source] = true;
+            System.out.println(nodes.get(source).data + " = visited");
+        }
+
+        for(int i =0; i < matrix[source].length; i++){
+            if(matrix[source][i] == 1){
+                dfsHelper(i, visited);
+            }
+        }
+        return;
+    }
 }

@@ -27,5 +27,7 @@ public class GraphMatrixTest {
         graph.print();
 
         System.out.println(graph.checkEdge(2,1));
+
+        graph.depthFirstSearch(0);
     }
 }
